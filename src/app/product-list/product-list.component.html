@@ -1,7 +1,11 @@
 <h1> Product List </h1>
-<h2> {{product.product | uppercase}} Details</h2>
-<div> <span> Id: </span>{{product.productid}}</div>
-<div><span> Price: </span>{{product.productPrice}}</div>
-<div><span> Quantity: </span>{{product.productQty}}</div>
+<ul class="products">
+  <li *ngFor = "let product of products">
+    <span class="badge">
+      {{product.product}}
+    </span>
+    
+  </li>
+</ul>
 
 
