@@ -8,8 +8,15 @@ import { MOCKPRODUCTS } from '../mock-products';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  
-  products = MOCKPRODUCTS; 
+
+  products: Product [] = MOCKPRODUCTS;
+  selectedProduct: Product; 
+
+  //method to display a product on selecting from a list
+  onSelect(product: Product): void{ 
+    this.selectedProduct = product;
+  }
+
   constructor() { }
 
   ngOnInit() {
