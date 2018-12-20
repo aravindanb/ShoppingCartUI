@@ -12,19 +12,14 @@ export class ProductListComponent implements OnInit {
 
   products: Product [];
   
-  // Public property from the component to be bound to the template
-  selectedProduct: Product; 
-
-  // method to display a product on selecting from a list, bound to the template
-  onSelect(product: Product): void{ 
-    this.selectedProduct = product;
-  }
-
   getProducts(): void{
-    //  this.productService.getProducts().subscribe(function(products){
-    //    this.products = products;
-    //  });
-    this.products = this.productService.getProducts();
+     this.productService.getProducts().subscribe(products=>
+      {
+       console.log(products);
+       this.products = products
+      }
+      
+     );
   }
   constructor(private productService: ProductService) { }
 

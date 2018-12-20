@@ -20,7 +20,17 @@ export class ProductService {
   //   return of(MOCKPRODUCTS);
   // }
 
-  getProducts() : Product []{
-    return MOCKPRODUCTS;
+  getProducts() : Observable<Product[]>{
+    return of(MOCKPRODUCTS);
+  }
+
+  // method to return mock product by id
+  // todo: call an endpoint to return this json later
+  // getProducts(): Observable<Product[]> {
+  //   return of(MOCKPRODUCTS);
+  // }
+  getProduct(id: number): Observable<Product> {
+    return of(
+      MOCKPRODUCTS.find(product => product.productid === id));
   }
 }

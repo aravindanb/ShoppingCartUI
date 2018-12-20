@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { ProductService} from '../product.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -9,11 +12,26 @@ import { Product } from '../product';
 export class ProductDetailComponent implements OnInit {
 
   // The Angular compiler won't bind to properties of a different component unless they are Input or Output properties.
-  @Input() product: Product; 
+  product: Product; 
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService,
+    private location: Location
+  ) { }
+
+  getProduct(): void{
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+    this.productService.getProduct(Number(id)).subscribe(product=> {
+      console.log(product);
+      this.product=product
+    });
+
+  }
 
   ngOnInit() {
+    this.getProduct();
   }
 
 }
