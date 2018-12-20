@@ -1,9 +1,9 @@
 <h1> Product Catalogue </h1>
 <ul class="products">
   <li *ngFor = "let product of products"> 
-    <a routerLink="productdetails/{{product.productid}}">
+      <a routerLink="/productdetails/{{product.productid}}">
       <span class="badge">{{product.productid}}</span>
-    </a>
     {{product.product}}
+  </a>
   </li>
 </ul>
