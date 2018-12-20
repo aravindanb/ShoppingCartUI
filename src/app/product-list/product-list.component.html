@@ -1,12 +1,9 @@
 <h1> Product Catalogue </h1>
 <ul class="products">
-  <li *ngFor = "let product of products" (click)="onSelect(product)" [class.selected]="product === selectedProduct"> 
-    <span class="badge">
-      {{product.productid}}
-    </span>
+  <li *ngFor = "let product of products"> 
+    <a routerLink="productdetails/{{product.productid}}">
+      <span class="badge">{{product.productid}}</span>
+    </a>
     {{product.product}}
   </li>
 </ul>
-
-<!-- In binding to a property of a different component (product-detail), the other component's property is to the left of the (=). -->
-<app-product-detail [product]="selectedProduct"></app-product-detail>
