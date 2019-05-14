@@ -12,20 +12,19 @@ import { ProductService} from '../product.service';
 export class ProductDetailComponent implements OnInit {
 
   // The Angular compiler won't bind to properties of a different component unless they are Input or Output properties.
-  product: Product; 
-
+  product: Product;
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
     private location: Location
   ) { }
 
-  getProduct(): void{
+  getProduct(): void {
     const id = this.route.snapshot.paramMap.get('id');
     console.log(id);
-    this.productService.getProduct(Number(id)).subscribe(product=> {
+    this.productService.getProduct(id).subscribe(product => {
       console.log(product);
-      this.product=product
+      this.product = product;
     });
 
   }
