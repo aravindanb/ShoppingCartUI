@@ -134,7 +134,7 @@
   "defaultProject": "shopping-cart-ui",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "styleext": "css"
     }
   }
 }
