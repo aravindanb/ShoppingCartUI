@@ -1,9 +1,13 @@
-<h1> Product Catalogue </h1>
-<ul class="products">
-  <li *ngFor = "let product of products"> 
+<ul class="mdc-image-list my-image-list">
+  <li *ngFor="let product of products" class="mdc-image-list__item">
+    <div class="mdc-image-list__image-aspect-container">
+      <img class="mdc-image-list__image"
+           src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/11.jpg">
+    </div>
+    <div class="mdc-image-list__supporting">
       <a routerLink="/productdetails/{{product._id}}">
-      <span class="badge">{{product._id}}</span>
-    {{product.product}}
-  </a>
+      <span class="mdc-image-list__label">{{product.product}}</span>
+      </a>
+    </div>
   </li>
 </ul>
