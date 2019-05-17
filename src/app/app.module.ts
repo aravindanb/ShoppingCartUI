@@ -7,20 +7,28 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { CartComponent } from './cart/cart.component';
-import { LoginComponent } from './login/login.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductDetailComponent,
-    CartComponent,
-    LoginComponent
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatCardModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

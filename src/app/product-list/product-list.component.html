@@ -1,22 +1,5 @@
-<h1> Product Details </h1>
-<div class="mdc-layout-grid">
-  <div class="mdc-layout-grid__inner">
-    <div class="mdc-layout-grid__cell">
-      <ul class="mdc-image-list mdc-image-list--masonry my-masonry-image-list">
-        <li *ngFor="let product of products" class="mdc-image-list__item">
-          <div class="mdc-image-list__image-aspect-container">
-            <img class="mdc-image-list__image"
-                 src="https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/11.jpg">
-          </div>
-          <div class="mdc-image-list__supporting">
-            <a routerLink="/productdetails/{{product._id}}">
-      <span class="mdc-image-list__label">
-      {{product.product}}
-        </span>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
+<mat-nav-list>
+  <mat-list-item *ngFor = "let product of products">
+    <a routerLink="/productdetails/{{product._id}}"> {{product.product}}</a>
+  </mat-list-item>
+</mat-nav-list>
