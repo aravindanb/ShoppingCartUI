@@ -1,5 +1,6 @@
 <mat-nav-list>
-  <mat-list-item *ngFor = "let product of products">
+  <mat-list-item role="navigation" *ngFor = "let product of products">
     <a routerLink="/productdetails/{{product._id}}"> {{product.product}}</a>
+  <mat-divider [inset]="true"></mat-divider>
   </mat-list-item>
 </mat-nav-list>
