@@ -46,3 +46,12 @@
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
+.my-image-list {
+@include mdc-image-list-standard-columns(5);
+}
+.my-masonry-image-list {
+@include mdc-image-list-masonry-columns(5);
+  max-width: 300px;
+}
+
+
