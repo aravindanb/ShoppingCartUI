@@ -1,9 +1,5 @@
-<h1> Product Catalogue </h1>
-<ul class="products">
-  <li *ngFor = "let product of products"> 
-      <a routerLink="/productdetails/{{product._id}}">
-      <span class="badge">{{product._id}}</span>
-    {{product.product}}
-  </a>
-  </li>
-</ul>
+<mat-nav-list >
+  <mat-list-item role="navigation" *ngFor = "let product of products" routerLink="/productdetails/{{product._id}}"> {{product.product}}
+  <mat-divider [inset]="true" ></mat-divider>
+  </mat-list-item>
+</mat-nav-list>
