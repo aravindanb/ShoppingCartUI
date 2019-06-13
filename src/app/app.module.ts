@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -33,8 +34,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatListModule,
     MatCardModule,
     MatToolbarModule,
-    MatDividerModule
-
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
