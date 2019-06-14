@@ -13,7 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
@@ -35,7 +35,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatToolbarModule,
     MatDividerModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
