@@ -1,5 +1,14 @@
 <mat-toolbar>
   <span>Shopping Cart UI</span>
 </mat-toolbar>
+<mat-sidenav-container>
+<mat-sidenav mode="side" opened>
+Insert Menu Bar Here
+</mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet>
 
-<router-outlet></router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
