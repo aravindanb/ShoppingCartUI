@@ -2,8 +2,14 @@
   <span>Shopping Cart UI</span>
 </mat-toolbar>
 <mat-sidenav-container>
-<mat-sidenav mode="side" opened>
-Insert Menu Bar Here
+<mat-sidenav #sidenav mode="side" opened>
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="'/home'"> Home </a>
+    <a mat-list-item [routerLink]="'/cart'"> Shopping Cart </a>
+    <a mat-list-item [routerLink]="'/productcatalogue'"> Shop </a>
+    <a mat-list-item (click)="sidenav.toggle()" href="">Close</a>
+
+  </mat-nav-list>
 </mat-sidenav>
   <mat-sidenav-content>
     <router-outlet>
