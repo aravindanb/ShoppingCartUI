@@ -14,9 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSidenavModule} from '@angular/material/sidenav';
-
-
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -31,6 +29,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatIconModule,
     MatListModule,
     MatCardModule,
     MatToolbarModule,
