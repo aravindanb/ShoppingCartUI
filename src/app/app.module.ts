@@ -13,10 +13,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
-
-
-
-
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -24,18 +23,21 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AppComponent,
     ProductListComponent,
     ProductDetailComponent,
-    CartComponent
+    CartComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatIconModule,
     MatListModule,
     MatCardModule,
     MatToolbarModule,
     MatDividerModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

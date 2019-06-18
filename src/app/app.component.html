@@ -1,5 +1,24 @@
 <mat-toolbar>
-  <span>Shopping Cart UI</span>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>home</mat-icon></button>
+  </mat-toolbar-row>
+  <mat-toolbar-row>    <span>Shopping Cart</span>
+  </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+<mat-sidenav #sidenav mode="side" opened>
+  <mat-nav-list>
+    <a mat-list-item [routerLink]="'/home'"> Home </a>
+    <a mat-list-item [routerLink]="'/cart'"> Shopping Cart </a>
+    <a mat-list-item [routerLink]="'/productcatalogue'"> Shop </a>
+    <a mat-list-item (click)="sidenav.toggle()" href="">Close</a>
+  </mat-nav-list>
+
+</mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
