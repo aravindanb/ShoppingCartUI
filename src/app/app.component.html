@@ -1,18 +1,23 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>home</mat-icon></button>
+    <span>Shopping Cart</span>
   </mat-toolbar-row>
-  <mat-toolbar-row>    <span>Shopping Cart</span>
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>home</mat-icon></button>
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+<button routerLink="/home">    <mat-icon>account_circle</mat-icon></button>
+    <button [routerLink]="'/cart'"><mat-icon matBadge="22" matBadgePosition="above after">shopping_cart</mat-icon></button>
   </mat-toolbar-row>
 </mat-toolbar>
 
 <mat-sidenav-container>
 <mat-sidenav #sidenav mode="side" opened>
   <mat-nav-list>
-    <a mat-list-item [routerLink]="'/home'"> Home </a>
+    <a mat-list-item [routerLink]="'/home'"> Profile </a>
     <a mat-list-item [routerLink]="'/cart'"> Shopping Cart </a>
     <a mat-list-item [routerLink]="'/productcatalogue'"> Shop </a>
-    <a mat-list-item (click)="sidenav.toggle()" href="">Close</a>
+    <!--<a mat-list-item (click)="sidenav.toggle()" href="">Close</a>-->
   </mat-nav-list>
 
 </mat-sidenav>
