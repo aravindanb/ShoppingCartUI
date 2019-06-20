@@ -6,8 +6,8 @@
     <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>home</mat-icon></button>
     <!-- This fills the remaining space of the current row -->
     <span class="example-fill-remaining-space"></span>
-    <mat-icon>account_circle  </mat-icon>
-    <mat-icon matBadge="22" matBadgePosition="above after">shopping_cart</mat-icon>
+<button routerLink="/home">    <mat-icon>account_circle</mat-icon></button>
+    <button [routerLink]="'/cart'"><mat-icon matBadge="22" matBadgePosition="above after">shopping_cart</mat-icon></button>
   </mat-toolbar-row>
 </mat-toolbar>
 
